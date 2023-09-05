@@ -19,7 +19,7 @@ resource "aws_elb" "bar" {
 
   instances                 = ["${aws_instance.one.id}", "${aws_instance.two.id}"]
   cross_zone_load_balancing = true
-  idle_timeout              = 40000
+  idle_timeout              = 400
   tags = {
     Name = "raham-tf-elb"
   }
